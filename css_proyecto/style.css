@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --secondary-font: "Madimi One";
+  --font: "Rubik";
+  --font2: "Oswald";
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  background: black;
+}
+
+/* HEADER */
+
+.top-header {
+  background: black;
+}
+.img_logo {
+  height: 30px;
+}
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.links {
+  display: flex;
+  gap: 10px;
+}
+.links a {
+  color: #ffff;
+  position: relative;
+}
+.links a::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.links a:hover:after {
+  width: 100%;
+}
+
+.img-header {
+  background-image: url(./assets/image/desktop-wallpaper-amd-amd-ryzen.jpg);
+  background-size: cover;
+
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 9px;
+  align-items: center;
+  text-align: center;
+  text-wrap: balance;
+  font-weight: 500;
+  font-size: 18px;
+  gap: 35px;
+  color: white;
+  letter-spacing: 0.5px;
+  font-family: var(--font);
+}
+.img-header p {
+  font-family: var(--secondary-font);
+}
+
+.img-header button {
+  width: fit-content;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right, rgb(114, 114, 114), rgb(0, 0, 0));
+}
+.img-header button:hover {
+  transform: scale(1.1);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+/* BODY */
+
+.title {
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--font);
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+}
+
+.description img {
+  width: 100%;
+}
+.description h3 {
+  color: white;
+  font-family: var(--font2);
+  letter-spacing: 1px;
+  font-size: 22px;
+  padding-bottom: 7px;
+}
+.description p {
+  color: white;
+  font-family: var(--font);
+  font-size: 15px;
+}
+
+.description div {
+  padding: 20px;
+}
+
+.description button {
+  border: none;
+  padding: 9px 25px;
+}
+
+.container-apps-tools div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+  margin: 10px;
+}
+.container-apps-tools p {
+  color: white;
+  font-family: var(--font);
+  font-weight: 400;
+}
+.container-apps-tools > p {
+  color: white;
+  padding-left: 15px;
+}
+.container-apps-tools h3 {
+  color: white;
+}
+.container-apps-tools button {
+  width: fit-content;
+  padding: 7px 30px;
+}
+
+.box:nth-child(1) {
+  background-image: url(./assets/image/2cded213-5f74-4651-ac63-59c830a08f9e.png);
+  background-size: cover;
+}
+.box:nth-child(2) {
+  background-image: url(./assets/image/1804711-radeon-pro-abstract-background-1920x800.avif);
+  background-size: cover;
+}
+.box:nth-child(3) {
+  background-image: url(./assets/image/770814-red-light-rays-bg-1920x600.webp);
+  background-size: cover;
+}
+.box:nth-child(4) {
+  background-image: url(./assets/image/2374653-radeon-prorender-banner.avif);
+  background-size: cover;
+}
+
+footer {
+  width: 100%;
+  background: rgb(17, 17, 18);
+  color: white;
+}
+footer h2 {
+  font-family: var(--font);
+}
+.pie {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1 1fr;
+  gap: 30px;
+}
+
+.footer-logo {
+  padding-top: 10px;
+  width: 200px;
+}
+.footer-aboutme h2 {
+  font-family: var(--font);
+}
+.footer-aboutme p {
+  font-family: var(--font);
+}
+.footer-social {
+  display: flex;
+  gap: 50px;
+  font-size: 30px;
+}
+.footer-social i {
+  color: #ffff;
+}
+.footer-derechos {
+  text-align: center;
+}
