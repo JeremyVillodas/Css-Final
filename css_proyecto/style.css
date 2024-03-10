@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import 'https://fonts.googleapis.com/css2?family=Madimi+One&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap';
 
 :root {
   --secondary-font: "Madimi One";
@@ -19,196 +19,343 @@ body {
   background: black;
 }
 
-/* HEADER */
-
 .top-header {
   background: black;
 }
-.img_logo {
+
+.img-logo {
   height: 30px;
 }
+
 .navbar-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   gap: 20px;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
 }
+
 .links {
   display: flex;
   gap: 10px;
 }
-.links a {
-  color: #ffff;
-  position: relative;
+
+footer a{
+  font-size: 19px;
+  color: #757575;
 }
+
+.links a {
+  position: relative;
+  color: #ffff;
+}
+
 .links a::after {
-  content: "";
   position: absolute;
-  background-color: white;
-  height: 3px;
-  width: 0;
-  left: 0;
   bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  content: "";
+  background-color: white;
   transition: 0.5s;
 }
-.links a:hover:after {
+
+.links a:hover::after {
   width: 100%;
+}
+
+.links-redes{
+  display: flex;
+  gap: 30px;
 }
 
 .img-header {
-  background-image: url(./assets/image/desktop-wallpaper-amd-amd-ryzen.jpg);
-  background-size: cover;
-
-  width: 100%;
-  height: 400px;
   display: flex;
   flex-direction: column;
-  padding-top: 9px;
+  gap: 30px;
   align-items: center;
+  height: 400px;
+  padding-top: 9px;
+  font-family: var(--font);
+  font-size: 19px;
+  font-weight: 500;
+  color: white;
   text-align: center;
   text-wrap: balance;
-  font-weight: 500;
-  font-size: 18px;
-  gap: 35px;
-  color: white;
   letter-spacing: 0.5px;
-  font-family: var(--font);
+  background-image: url("./assets/image/desktop-wallpaper-amd-amd-ryzen.jpg");
+  background-size: cover;
 }
+
 .img-header p {
   font-family: var(--secondary-font);
 }
 
+.container-apps-tools button {
+  width: fit-content;
+  padding: 7px 30px;
+}
+
+.description button {
+  padding: 9px 25px;
+  border: none;
+}
+
 .img-header button {
   width: fit-content;
+  padding: 9px 20px;
+  font-size: 16px;
   color: white;
-  padding: 5px 15px;
+  background: linear-gradient(to right, rgb(114 114 114), rgb(0 0 0));
   border: none;
   border-radius: 5px;
-  background: linear-gradient(to right, rgb(114, 114, 114), rgb(0, 0, 0));
 }
+
 .img-header button:hover {
-  transform: scale(1.1);
-  transition: all 0.2s;
   cursor: pointer;
+  transition: all 0.2s;
+  transform: scale(1.1);
 }
-/* BODY */
 
 .title {
   display: flex;
-  font-size: 18px;
-  font-weight: 600;
-  font-family: var(--font);
   width: 100%;
   padding: 10px;
+  font-family: var(--font);
+  font-size: 18px;
+  font-weight: 600;
   background-color: white;
 }
 
 .description {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
 }
 
 .description img {
   width: 100%;
 }
+
 .description h3 {
-  color: white;
-  font-family: var(--font2);
-  letter-spacing: 1px;
-  font-size: 22px;
   padding-bottom: 7px;
-}
-.description p {
+  font-family: var(--font2);
+  font-size: 22px;
   color: white;
+  letter-spacing: 1px;
+}
+
+.description p {
   font-family: var(--font);
   font-size: 15px;
+  color: white;
 }
 
 .description div {
   padding: 20px;
 }
 
-.description button {
-  border: none;
-  padding: 9px 25px;
-}
 
-.container-apps-tools div {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.container-apps-tools div{
   padding: 15px;
   margin: 10px;
 }
+
+.apps-tools-grid{
+  display: grid;
+}
+
 .container-apps-tools p {
-  color: white;
   font-family: var(--font);
   font-weight: 400;
-}
-.container-apps-tools > p {
   color: white;
-  padding-left: 15px;
 }
+
+.container-apps-tools > p {
+  padding-left: 15px;
+  color: white;
+}
+
 .container-apps-tools h3 {
   color: white;
 }
-.container-apps-tools button {
-  width: fit-content;
-  padding: 7px 30px;
+
+.box{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .box:nth-child(1) {
-  background-image: url(./assets/image/2cded213-5f74-4651-ac63-59c830a08f9e.png);
+  background-image: url("./assets/image/2cded213-5f74-4651-ac63-59c830a08f9e.png");
   background-size: cover;
 }
+
 .box:nth-child(2) {
-  background-image: url(./assets/image/1804711-radeon-pro-abstract-background-1920x800.avif);
+  background-image: url("./assets/image/1804711-radeon-pro-abstract-background-1920x800.avif");
   background-size: cover;
 }
+
 .box:nth-child(3) {
-  background-image: url(./assets/image/770814-red-light-rays-bg-1920x600.webp);
+  background-image: url("./assets/image/770814-red-light-rays-bg-1920x600.webp");
   background-size: cover;
 }
+
 .box:nth-child(4) {
-  background-image: url(./assets/image/2374653-radeon-prorender-banner.avif);
+  background-image: url("./assets/image/2374653-radeon-prorender-banner.avif");
   background-size: cover;
 }
 
 footer {
-  width: 100%;
-  background: rgb(17, 17, 18);
+  width: fit-content;
+  padding-top: 10px;
   color: white;
+  background: rgb(17 17 18);
 }
+
 footer h2 {
   font-family: var(--font);
+  font-size: 26px;
 }
+
 .pie {
-  padding: 10px;
   display: grid;
-  grid-template-columns: 1 1fr;
   gap: 30px;
+  padding: 10px;
 }
 
 .footer-logo {
-  padding-top: 10px;
   width: 200px;
+  padding-top: 10px;
 }
+
 .footer-aboutme h2 {
   font-family: var(--font);
 }
+
 .footer-aboutme p {
   font-family: var(--font);
+  font-size: 18px;
 }
+
+.footer-aboutme img {
+  width: 200px;
+}
+
+.footer-noticias,
+.footer-empresa,
+.footer-aboutme,
+.footer-comunidad{
+display: flex;
+flex-direction: column;
+gap: 15px;
+color: #ffff;
+}
+
 .footer-social {
   display: flex;
-  gap: 50px;
-  font-size: 30px;
+  flex-direction:column;
+  gap: 25px;
+  font-size: 20px;
 }
+
 .footer-social i {
+  font-size: 2.3rem;
   color: #ffff;
 }
+
+
 .footer-derechos {
   text-align: center;
+}
+
+@media (width >= 768px) {
+  .navbar-container {
+    flex-direction:row;
+  }
+
+  .img-header {
+    align-items:flex-start;
+    justify-content: center;
+    padding:2rem;
+    text-align:inherit;
+    background-image: url("./assets/image/2474370-embedded-plus-hero-banner.jpg");
+  }
+
+  .img-header p {
+    width: 450px;
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .img-header button {
+    padding: 20px 35px;
+    font-size: 19px; 
+  }
+
+  .container-apps-tools > p {
+    font-size: 25px;
+  }
+
+  .container-apps-tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .apps-tools-grid{
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(6,1fr);
+    max-width: 1200px;
+  }
+
+  .box:nth-child(1){
+    grid-row: 1;
+    grid-column: 1/5;
+  }
+
+  .box:nth-child(2){
+    grid-row: 1;
+    grid-column: 5/7;
+  }
+
+  .box:nth-child(3){
+    grid-row: 2;
+    grid-column: -7/-5;
+  }
+
+  .box:nth-child(4){
+    grid-column: -5/-1;
+  }
+
+  .container-apps-tools button {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+
+  .pie{
+    grid-template-columns: repeat(5,1fr);
+  }
+
+
+  .footer-aboutme{
+    gap: 15px;
+  }
+}
+
+@media (width >= 1440px) {
+  .img-header {
+  height:450px ;
+  padding-top: 90px;
+  margin-bottom: 20px;
+  }
+
+  .img-header p {
+    width: 600px;
+    font-size: 25px
+  }
 }
