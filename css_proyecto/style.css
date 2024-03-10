@@ -1,9 +1,13 @@
-@import 'https://fonts.googleapis.com/css2?family=Madimi+One&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Madimi+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap';
+@import "https://db.onlinewebfonts.com/c/22de347a8207b570b446ebedffac36e3?family=Klavika+Web+Medium+Condensed";
 
 :root {
   --secondary-font: "Madimi One";
   --font: "Rubik";
   --font2: "Oswald";
+  --font3: "Open Sans";
+  --font4: "Klavika Web Medium Condensed";
+  --font5: "Noto Sans";
 }
 
 * {
@@ -34,6 +38,21 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  font-size: 17px;
+}
+
+button{
+  color: #ffff;
+  background-color: black;
+  border: 1px solid #ffff;
+  transition: 0.5s;
+}
+
+button:hover{
+  color: black;
+  cursor: pointer;
+  background-color: #ffff;
+  transform: scale(1.1);
 }
 
 .links {
@@ -44,12 +63,19 @@ body {
 footer a{
   font-size: 19px;
   color: #757575;
+  transition: 0.5s;
 }
 
 .links a {
   position: relative;
   color: #ffff;
 }
+
+footer a:hover{
+  color: #ffff;
+  transform: scale(1.1);
+}
+
 
 .links a::after {
   position: absolute;
@@ -100,8 +126,22 @@ footer a{
 
 .description button {
   padding: 9px 25px;
-  border: none;
+  
 }
+
+.description img{
+  width: 100%;
+  transition: 0.5s;
+}
+
+.footer-aboutme img {
+  width: 200px;
+}
+
+.description img:hover{
+  transform: scale(1.1);
+}
+
 
 .img-header button {
   width: fit-content;
@@ -134,21 +174,18 @@ footer a{
   grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
 }
 
-.description img {
-  width: 100%;
-}
-
 .description h3 {
   padding-bottom: 7px;
-  font-family: var(--font2);
-  font-size: 22px;
+  font-family: var(--font4);
+  font-size: 31px;
+  font-weight: 900;
   color: white;
   letter-spacing: 1px;
 }
 
 .description p {
-  font-family: var(--font);
-  font-size: 15px;
+  font-family: var(--font5);
+  font-size: 16px;
   color: white;
 }
 
@@ -167,8 +204,9 @@ footer a{
 }
 
 .container-apps-tools p {
-  font-family: var(--font);
-  font-weight: 400;
+  font-family: var(--font3);
+  font-size: 17px;
+  font-weight: 600;
   color: white;
 }
 
@@ -178,6 +216,8 @@ footer a{
 }
 
 .container-apps-tools h3 {
+  font-family: var(--font3);
+  font-size: 23px;
   color: white;
 }
 
@@ -203,7 +243,7 @@ footer a{
 }
 
 .box:nth-child(4) {
-  background-image: url("./assets/image/2374653-radeon-prorender-banner.avif");
+  background-image: url("./assets/image/2374653-radeon.jpg");
   background-size: cover;
 }
 
@@ -239,9 +279,6 @@ footer h2 {
   font-size: 18px;
 }
 
-.footer-aboutme img {
-  width: 200px;
-}
 
 .footer-noticias,
 .footer-empresa,
@@ -285,6 +322,7 @@ color: #ffff;
 
   .img-header p {
     width: 450px;
+    font-family: var(--font3);
     font-size: 20px;
   }
 
